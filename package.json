@@ -1,0 +1,36 @@
+{
+  "name": "webpack-marvelous",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "start:dev": "cross-env NODE_ENV=development webpack serve",
+    "start:qa": "cross-env NODE_ENV=qa webpack serve",
+    "start:staging": "cross-env NODE_ENV=staging webpack serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.4.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
