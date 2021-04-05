@@ -1,31 +1,27 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import Img from './images/parsilogo.jpg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './styles.scss';
 
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+
+import ItemState from './context/item/ItemState';
+
 const App = () => {
-  /**
- * 
- let endpointUrl;
- switch (process.env.NODE_ENV) {
-    case 'production':
-      endpointUrl = 'www.production.epicgame.com/v1';
-      break;
-      case 'qa':
-      endpointUrl = 'www.qa.epicgame.com/v1';
-      break;
-    default:
-      endpointUrl = 'www.development.epicgame.com/v1';
-      break;
-    }
- */
-  const env = process.env.NODE_ENV;
   return (
-    <div>
-      <h1>Hello ReactJS!!</h1>
-      <p>Sass css! {env}</p>
-      <img src={Img} />
-    </div>
+    <ItemState>
+      <Router>
+        <Fragment>
+          <div className='container'>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route exact path='/about' component={About} />
+            </Switch>
+          </div>
+        </Fragment>
+      </Router>
+    </ItemState>
   );
 };
 
