@@ -14,7 +14,7 @@ npm run build
 ```
 To run in development mode
 ```bash
-npm rub start:dev
+npm run start:dev
 ```
 
 ## Usage
